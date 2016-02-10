@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body> 
+	<input type="text" class="TextBox" id="Text1">
+
+		<select id="operator" class="TextBox2"><!--Equal to z-->
+		<option value="add">Addition</option>
+		<option value="sub">Subtraction</option>
+		<option value="div">Division</option>
+		<option value="mul">Multiplication</option>
+		<option value="sqrt">Square Root</option>
+		<option value="cbrt">Cube Root</option>
+		<option value="pow">The Power of</option>
+
+	<input type="text" class="TextBox1" id="Text2"><!--Equal to y-->
+	<button type="button" class="myButton" onClick="myfunction()"><center>Check</center></button>
+	<p id="result" class="P"></p>
+
+<script>
+	
+	function myfunction(){
+		var x = document.getElementById("Text1").value;
+		var y=document.getElementById("Text2").value;
+		var z=document.getElementById("operator").value;
+		var result;
+		x = parseFloat(x);
+		y = parseFloat(y);
+		if(z=="add"){
+			result= x+y;
+		}else if(z=="sub"){
+			result=x-y;
+		}else if(z=="div"){
+			result=x/y;
+		}else if(z=="mul"){
+			result=x*y;
+		}else if(z=="sqrt"){
+			result= Math.sqrt(x);
+		}else if (z== "cbrt") {
+			result= Math.cbrt(x) ;
+		}else if(z== "pow"){
+			result= Math.pow(x, y);
+		};
+		document.getElementById("result").innerHTML= "Answer: " + result;
+	}
+
+
+</script>
+<style>
+	.myButton {
+	background-color:#44c767;
+	border-radius:8px;
+	border-radius:8px;
+	border-radius:8px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family: Arial;
+	font-size:20px;
+	font-weight:bold;
+	padding:13px 32px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #2f6627;
+}
+.myButton:hover {
+	background-color:#5cbf2a;
+}
+.myButton{
+	position: absolute;
+	top: 300px;
+	left: 430px;
+}
+.myButton{
+	width: 450px;
+	height: 50px;
+}
+
+.TextBox {
+	width: 300px;
+	height: 90px;
+	border: 1px solid #3366FF;
+	border-left: 4px solid #3366FF;
+	font-size: 50px;
+}
+.TextBox{
+	position: fixed;
+	top: 20px;
+	left: 500px;
+}
+.TextBox1 {
+	width: 300px;
+	height: 90px;
+	border: 1px solid #3366FF;
+	border-left: 4px solid #3366FF;
+	font-size: 50px;
+}
+.TextBox1 {
+	position: fixed;
+	top: 190px;
+	left: 500px;
+}
+.TextBox2 {
+	width: 160px;
+	height: 45px;
+	border: 1px solid #3366FF;
+	border-left: 4px solid #3366FF;
+	font-size: 20px;
+	font-position: center;
+}
+.TextBox2 {
+	position: fixed;
+	top: 130px;
+	left: 340px;
+}
+
+
+.P{
+	width: 450px;
+	height: 50px;
+	font-size: 40px;
+	padding: 7px;
+	
+}
+.P{
+    border-style: solid;
+    border-width: 6px 20px 6px 20px;
+	border-color: green;
+}
+.P{
+	position: fixed;
+	top: 330px;
+	left: 400px;
+}
+
+</style>
+</body>
+</html>
